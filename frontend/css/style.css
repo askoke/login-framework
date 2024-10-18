@@ -1,17 +1,23 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #333333;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
 }
+nav {
+    background-color: #4CAF50;
+    padding: 10px 0;
+    text-align: center;
+}
+
 .login-container {
-    background-color: #fff;
+    background-color: #dddddd;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.45);
     width: 300px;
 }
 .login-container h2 {
@@ -31,6 +37,7 @@ body {
 .login-container button {
     width: 100%;
     padding: 10px;
+    margin: 10px 0;
     background-color: #4CAF50;
     color: white;
     border: none;
