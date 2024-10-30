@@ -1,11 +1,16 @@
-import express from 'express';
+const express = require('express');
+const mongodb = require('./utils/mongodb.connect');
+const bodyParser = require('body-parser');
 const app = express();
-import mongodb from require('./utils/mongodb.connect');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 mongodb.connect();
 
-app.use(express.json());
-app.use('/login', require('./routes/login.route'));
+const usersRoutes = require('./routes/routes');
+
+app.use('/users', usersRoutes);
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
